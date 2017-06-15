@@ -1,6 +1,8 @@
 # Micropost
 A simple meteor application demo
 
+View live demo on https://micropost.view-this.info
+
 ## Test
 ```
   meteor test --driver-package practicalmeteor:mocha

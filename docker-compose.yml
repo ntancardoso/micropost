@@ -11,7 +11,7 @@ services:
         ports:
             - "80:80"
         environment:
-            MONGO_URL: 'mongodb://mongo/urlongr'
+            MONGO_URL: 'mongodb://mongo/micropost'
             ROOT_URL: 'http://localhost'
             PORT: '80'
         command: [bash,-c,"cd /bundle/programs/server && npm install && node /bundle/main.js"]
