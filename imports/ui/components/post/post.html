@@ -1,0 +1,9 @@
+<template name="post">
+  <li >
+    {{#if isOwner}}
+      <button class="delete">&times;</button>
+    {{/if}}
+    <div class="user">{{username}}</div>
+    <div class="text">{{text}}</div>
+  </li>
+</template>

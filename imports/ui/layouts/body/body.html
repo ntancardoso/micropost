@@ -1,0 +1,17 @@
+<body>
+    <div class="container">
+        <header>
+            <h1>Micropost</h1>
+            <div class="accounts-menu">
+                {{> loginButtons align="right"}}
+            </div>
+            <div>
+                {{#if currentUser}} {{> newpost}} {{/if}}
+            </div>
+        </header>
+
+        <ul>
+            {{#each posts}} {{> post}} {{/each}}
+        </ul>
+    </div>
+</body>

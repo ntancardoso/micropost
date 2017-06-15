@@ -1,0 +1,19 @@
+version: '2'
+services:
+    mongo:
+        image: mongo:latest
+        volumes:
+            - ./mongo/data:/data/db
+    web:
+        image: node:4.4.7
+        volumes:
+            - ./bundle:/bundle # path to meteor bundle
+        ports:
+            - "80:80"
+        environment:
+            MONGO_URL: 'mongodb://mongo/urlongr'
+            ROOT_URL: 'http://localhost'
+            PORT: '80'
+        command: [bash,-c,"cd /bundle/programs/server && npm install && node /bundle/main.js"]
+        depends_on:
+            - mongo
